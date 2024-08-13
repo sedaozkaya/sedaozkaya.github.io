@@ -21,12 +21,23 @@ header {
     padding: 1rem 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Kutu gölgesi */
     position: relative;
+    transition: background-color 0.3s; /* Renk geçişi */
+}
+
+header:hover {
+    background-color: #444; /* Hover efekti */
 }
 
 header h1 {
     margin: 0;
     text-align: center;
     font-size: 2rem; /* Büyük başlık */
+    letter-spacing: 1px; /* Harf aralığı */
+    transition: color 0.3s; /* Renk geçişi */
+}
+
+header:hover h1 {
+    color: #007bff; /* Hover efekti */
 }
 
 /* Menü */
@@ -45,12 +56,29 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
     transition: color 0.3s, transform 0.3s; /* Hover animasyonları */
 }
 
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #007bff;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    transition: width 0.3s; /* Alt çizgi animasyonu */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Hover efekti */
+}
+
 nav ul li a:hover {
-    color: #007bff; /* Buton hover rengi */
-    transform: scale(1.1); /* Hover etkisi */
+    color: #007bff; /* Hover rengi */
+    transform: scale(1.1); /* Hover efekti */
 }
 
 /* Hero Bölümü */
@@ -60,12 +88,18 @@ nav ul li a:hover {
     text-align: center;
     color: #f4f4f4;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); /* İç gölge efekti */
+    position: relative;
 }
 
 #hero h2 {
     margin: 0;
     font-size: 2.5rem; /* Büyük başlık */
     font-weight: bold;
+    transition: transform 0.5s; /* Başlık animasyonu */
+}
+
+#hero:hover h2 {
+    transform: scale(1.05); /* Hover efekti */
 }
 
 .btn {
@@ -77,25 +111,29 @@ nav ul li a:hover {
     border-radius: 5px;
     margin-top: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Kutu gölgesi */
-    transition: background-color 0.3s, transform 0.3s; /* Hover animasyonları */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Hover animasyonları */
 }
 
 .btn:hover {
     background-color: #0056b3; /* Buton hover rengi */
-    transform: scale(1.05); /* Hover etkisi */
+    transform: scale(1.05); /* Hover efekti */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Hover gölge efekti */
 }
 
 /* Bölümler */
 section {
     padding: 2rem 0;
+    transition: background-color 0.3s; /* Bölüm geçişi */
 }
 
-footer {
-    background: #333;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Kutu gölgesi */
+section:hover {
+    background-color: #333; /* Bölüm hover rengi */
+}
+
+h2 {
+    margin: 0;
+    font-size: 2rem; /* Başlık boyutu */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Başlık gölgesi */
 }
 
 /* Eğitim ve Sertifika Stilleri */
@@ -106,10 +144,13 @@ footer {
 .education-item h3, .certificate-item h3 {
     margin: 0;
     font-size: 1.5rem; /* Başlık boyutu */
+    border-bottom: 2px solid #007bff; /* Alt çizgi */
+    padding-bottom: 0.5rem;
 }
 
 .education-item p, .certificate-item p {
     margin: 0.5rem 0;
+    line-height: 1.6; /* Satır yüksekliği */
 }
 
 /* Yetenekler (Skills) */
@@ -130,25 +171,27 @@ footer {
     transition: width 0.5s; /* İlerleme animasyonu */
 }
 
-h3 {
-    margin: 0.5rem 0;
-}
-
 /* Projeler (Projects) */
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 1rem;
 }
 
 table th, table td {
     border: 1px solid #555;
     padding: 8px;
     text-align: left;
+    transition: background-color 0.3s; /* Satır geçişi */
 }
 
 table th {
     background-color: #333;
     color: white;
+}
+
+table tr:hover {
+    background-color: #444; /* Hover rengi */
 }
 
 /* Contact Bölümü */
@@ -165,9 +208,10 @@ table th {
 #contact ul li a {
     color: #007bff; /* Bağlantı rengi */
     text-decoration: none;
-    transition: color 0.3s; /* Hover animasyonu */
+    transition: color 0.3s, text-shadow 0.3s; /* Hover animasyonları */
 }
 
 #contact ul li a:hover {
     color: #0056b3; /* Hover rengi */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Hover gölgesi */
 }
