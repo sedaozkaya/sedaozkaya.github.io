@@ -3,8 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education</title>
+    <title>Education - Seda Şengül Özkaya</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Genel Stil Ayarları */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #2c2c2c, #1e1e1e);
+            color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        /* Kapsayıcı */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* Education Bölümü */
+        #education {
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        #education h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .education-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .education-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, background 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .education-item:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .education-item h3 {
+            font-size: 1.5rem;
+            margin: 0 0 10px;
+            color: #fff;
+        }
+
+        .education-item p {
+            font-size: 1rem;
+            color: #ccc;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,13 +156,15 @@
     <section id="education">
         <div class="container">
             <h2>Education</h2>
-            <div class="education-item">
-                <h3>Manisa Celal Bayar University</h3>
-                <p><strong>2023 - 2024 | Pre Class </strong></p>
-            </div>
-            <div class="education-item">
-                <h3>Manisa Celal Bayar University</h3>
-                <p><strong>2024 - Current | Computer Engineering</strong></p>
+            <div class="education-list">
+                <div class="education-item">
+                    <h3>Manisa Celal Bayar University</h3>
+                    <p><strong>2023 - 2024 | Pre Class</strong></p>
+                </div>
+                <div class="education-item">
+                    <h3>Manisa Celal Bayar University</h3>
+                    <p><strong>2024 - Current | Computer Engineering</strong></p>
+                </div>
             </div>
         </div>
     </section>

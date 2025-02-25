@@ -3,42 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About Me - Seda Şengül Özkaya</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Genel Stil Ayarları */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #2c2c2c, #1e1e1e);
+            color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        /* Kapsayıcı */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        /* About Bölümü */
+        #about {
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            color: #ccc;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        /* Sosyal Medya Bağlantıları */
+        .social-links {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 15px;
+            color: #fff;
+            font-size: 1.8rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+            color: #007bff;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
 </head>
 <body>
-<header>
-    <div class="container">
-        <h1>Seda Şengül Özkaya</h1>
-        <nav>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="certificates.html">Certificates</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    <header>
+        <div class="container">
+            <h1>Seda Şengül Özkaya</h1>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="certificates.html">Certificates</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<section id="about">
-    <div class="container">
-        <h2>About Me</h2>
-        <p>As a 1st-year Computer Engineering student, I have a strong interest in Artificial Intelligence and Machine
-            Learning, and I am constantly working on improving my skills in these areas. I have built a solid foundation
-            in Python and Java and aim to apply this knowledge in various projects to further enhance my abilities. I am
-            eager to analyze problems, develop algorithms, and create solutions using machine learning techniques. In
-            the future, I aim to deepen my expertise in this field and contribute to innovative projects, making
-            technology more efficient.</p>
-    </div>
-</section>
+    <section id="about">
+        <div class="container">
+            <div>
+                <h2>About Me</h2>
+                <p>
+                    As a 1st-year Computer Engineering student, I have a strong interest in Artificial Intelligence and Machine
+                    Learning, and I am constantly working on improving my skills in these areas. I have built a solid foundation
+                    in Python and Java and aim to apply this knowledge in various projects to further enhance my abilities. I am
+                    eager to analyze problems, develop algorithms, and create solutions using machine learning techniques. In
+                    the future, I aim to deepen my expertise in this field and contribute to innovative projects, making
+                    technology more efficient.
+                </p>
+                <!-- Sosyal Medya Bağlantıları -->
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/sedasengulozkaya/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/sedaozkaya" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:sedasengulozkaya5@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-    <div class="container">
-        <p>&copy; 2024 Seda Şengül Özkaya. All rights reserved.</p>
-    </div>
-</footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Seda Şengül Özkaya. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

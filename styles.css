@@ -1,217 +1,150 @@
 /* Genel Stil Ayarları */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+    color: #f4f4f4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background: linear-gradient(135deg, #2c2c2c, #1e1e1e); /* Gradient arka plan */
-    color: #f4f4f4; /* Yazı rengi */
+    line-height: 1.6;
 }
 
 /* Kapsayıcı */
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    max-width: 1200px;
 }
 
 /* Header */
 header {
-    background: #333;
-    color: white;
-    padding: 1rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Kutu gölgesi */
-    position: relative;
-    transition: background-color 0.3s; /* Renk geçişi */
-}
-
-header:hover {
-    background-color: #444; /* Hover efekti */
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1.5rem 0;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
     margin: 0;
-    text-align: center;
-    font-size: 2rem; /* Büyük başlık */
-    letter-spacing: 1px; /* Harf aralığı */
-    transition: color 0.3s; /* Renk geçişi */
+    color: #fff;
+    font-weight: 600;
 }
 
-header:hover h1 {
-    color: #007bff; /* Hover efekti */
-}
-
-/* Menü */
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin-top: 15px;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 1rem;
+    display: inline-block;
+    margin: 0 20px;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 1.1rem;
     position: relative;
-    transition: color 0.3s, transform 0.3s; /* Hover animasyonları */
+    transition: color 0.3s ease-in-out;
 }
 
 nav ul li a::after {
     content: '';
-    display: block;
+    position: absolute;
+    width: 100%;
     height: 2px;
     background: #007bff;
-    position: absolute;
-    left: 0;
     bottom: -5px;
-    width: 0;
-    transition: width 0.3s; /* Alt çizgi animasyonu */
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
 }
 
-nav ul li a:hover::after {
-    width: 100%; /* Hover efekti */
+nav ul li a:hover::after, nav ul li a.active::after {
+    transform: scaleX(1);
 }
 
-nav ul li a:hover {
-    color: #007bff; /* Hover rengi */
-    transform: scale(1.1); /* Hover efekti */
-}
-
-/* Hero Bölümü */
-#hero {
-    background: #2c2c2c; /* Koyu arka plan */
-    padding: 2rem 0;
-    text-align: center;
-    color: #f4f4f4;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3); /* İç gölge efekti */
-    position: relative;
-}
-
-#hero h2 {
-    margin: 0;
-    font-size: 2.5rem; /* Büyük başlık */
-    font-weight: bold;
-    transition: transform 0.5s; /* Başlık animasyonu */
-}
-
-#hero:hover h2 {
-    transform: scale(1.05); /* Hover efekti */
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #007bff; /* Buton rengi */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Kutu gölgesi */
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Hover animasyonları */
-}
-
-.btn:hover {
-    background-color: #0056b3; /* Buton hover rengi */
-    transform: scale(1.05); /* Hover efekti */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Hover gölge efekti */
-}
-
-/* Bölümler */
-section {
-    padding: 2rem 0;
-    transition: background-color 0.3s; /* Bölüm geçişi */
-}
-
-section:hover {
-    background-color: #333; /* Bölüm hover rengi */
-}
-
-h2 {
-    margin: 0;
-    font-size: 2rem; /* Başlık boyutu */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Başlık gölgesi */
-}
-
-/* Eğitim ve Sertifika Stilleri */
-.education-item, .certificate-item {
-    margin-bottom: 1rem;
-}
-
-.education-item h3, .certificate-item h3 {
-    margin: 0;
-    font-size: 1.5rem; /* Başlık boyutu */
-    border-bottom: 2px solid #007bff; /* Alt çizgi */
-    padding-bottom: 0.5rem;
-}
-
-.education-item p, .certificate-item p {
-    margin: 0.5rem 0;
-    line-height: 1.6; /* Satır yüksekliği */
-}
-
-/* Yetenekler (Skills) */
-.progress-bar {
-    background-color: #555;
-    border-radius: 5px;
-    margin: 1rem 0;
-    position: relative;
-    height: 25px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); /* İç gölge efekti */
-}
-
-.progress {
-    background-color: #007bff;
-    height: 100%;
-    width: 0; /* Bu width değeri HTML'de inline olarak ayarlanacaktır. */
-    border-radius: 5px;
-    transition: width 0.5s; /* İlerleme animasyonu */
-}
-
-/* Projeler (Projects) */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-table th, table td {
-    border: 1px solid #555;
-    padding: 8px;
-    text-align: left;
-    transition: background-color 0.3s; /* Satır geçişi */
-}
-
-table th {
-    background-color: #333;
-    color: white;
-}
-
-table tr:hover {
-    background-color: #444; /* Hover rengi */
+nav ul li a:hover, nav ul li a.active {
+    color: #007bff;
 }
 
 /* Contact Bölümü */
-#contact ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+#contact {
+    padding: 4rem 0;
 }
 
-#contact ul li {
-    margin: 0.5rem 0;
+#contact h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    font-weight: 700;
 }
 
-#contact ul li a {
-    color: #007bff; /* Bağlantı rengi */
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* Contact Link Butonları */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
     text-decoration: none;
-    transition: color 0.3s, text-shadow 0.3s; /* Hover animasyonları */
+    font-size: 1.1rem;
+    border-radius: 12px;
+    transition: transform 0.3s, background 0.3s;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-#contact ul li a:hover {
-    color: #0056b3; /* Hover rengi */
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Hover gölgesi */
+.contact-btn i {
+    font-size: 1.5rem;
+}
+
+.contact-btn.email {
+    background: linear-gradient(135deg, #ff6f61, #ff3b2f);
+}
+
+.contact-btn.linkedin {
+    background: linear-gradient(135deg, #0077b5, #00a0dc);
+}
+
+.contact-btn.github {
+    background: linear-gradient(135deg, #333, #000);
+}
+
+.contact-btn:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #ccc;
+    backdrop-filter: blur(10px);
 }
